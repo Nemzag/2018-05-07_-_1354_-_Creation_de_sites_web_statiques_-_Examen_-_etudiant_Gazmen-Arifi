@@ -1,0 +1,366 @@
+/* 2018-05-07 */
+
+@font-face {
+    font-family: Lato;
+    src: url("../fonts/Lato.ttf");
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* BODY */
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #3a4147;
+    color: #fff;
+
+    /*
+    // Error I made a fixed header. Corrected.
+    position: fixed;
+    top: 0;
+    height: 355px;
+    */
+}
+
+header > div > div > h1 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+header > div > h2 {
+    position: relative;
+    top: 118px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+header > div > h2 > span {
+    background-color: rgba(58, 65, 71, .8);
+    padding: 0.7em;
+}
+
+header > div > h2 > span > span {
+    color: #e65100;
+}
+
+header div {
+    box-sizing: content-box;
+}
+header div img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+nav ul li {
+    padding: .3em;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li:hover {
+    background-color: #e65100;
+}
+/* MAIN */
+main {
+    margin: 1em /*355px*/ 1em 0 1em;
+}
+
+/* SECTION */
+
+section h2::before {
+    content: "[ ";
+    color: #9d9db5;
+}
+section h2::after {
+    content: " ]";
+    color: #9d9db5;
+}
+
+section h2 {
+    padding: 1.6em 0;
+    color: #3a4147;
+    font-weight: normal;
+}
+
+/* ABOUT US */
+#about p {
+    color: #606078;
+    padding-bottom: 1.4em;
+}
+
+.btn {
+    background-color: #e65100;
+    border: none;
+    color: #fff;
+    height: 3.4em;
+    width: 9em;
+    font-size: 1em;
+    transition: filter 2s;
+}
+
+.btn:hover {
+    filter: brightness(200%);
+}
+
+#about > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#about > div div {
+    width: 100%;
+}
+
+/* OUR TEAM */
+
+div {
+    box-sizing: content-box;
+}
+
+#team i {
+    font-size: 1.8em;
+    color: #606060;
+}
+
+#team i:hover {
+    color: #e65100;
+}
+
+section#team > div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-flow: wrap;
+}
+
+section#team > div div {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+section#team h3 {
+    font-size: 1.6em;
+    padding-bottom: 1.2em;
+    color: #898989;
+    font-weight: normal;
+}
+section#team div div img {
+    border-radius: 100%;
+    border: 3px solid #eeeeee;
+    width: 90%;
+    transition-property: filter;
+    transition-duration: 2s;
+    transition-delay: 1s;
+}
+section#team div div img:hover {
+    filter: grayscale(100%);
+}
+section#team p {
+    padding: 1em;
+}
+
+/* CONTACT */
+
+#contact h3 {
+    font-weight: normal;
+    padding-bottom: 2em;
+}
+
+form {
+    color: #758abe;
+}
+input {
+    width: 40%;
+    padding: 0.8em 1.4em;
+    margin-bottom: 1.3em;
+    margin-right: 0.5em;
+    font-family: Lato, sans-serif;
+    font-size: .8em;
+    border: 1px solid #a9a9a9;
+}
+
+input:focus {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+input:invalid {
+    color: #e65100;
+}
+textarea {
+    width: 81%;
+    padding: 0.8em 1.4em;
+    margin-bottom: 1.3em;
+    font-family: Lato, sans-serif;
+    font-size: .8em;
+    border: 1px solid #a9a9a9;
+}
+
+input.btn {
+    width: 14rem;
+    height: 2.5rem;
+    font-size: .8em;
+    font-weight: bold;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+/* CONTACT INFO */
+address {
+    font-style: normal;
+    color: #000;
+}
+address i {
+    font-size: 1.4em;
+    color: #9d9d9d;
+}
+address a {
+    color: #000;
+    text-decoration: none;
+}
+address > div {
+    display: flex;
+    flex-direction: column;
+}
+
+address > div > div {
+    padding-bottom: 2em;
+}
+address > div > div {
+    display: flex;
+}
+
+address > div > div div:first-child {
+    padding-right: 4.2em;
+}
+
+/* FOOTER */
+footer {
+    background-color: #3a4147;
+    color: #fff;
+}
+
+footer section {
+    padding: 1em;
+}
+
+footer a {
+    color: #e65100;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 768px) {
+
+    /* HEADER */
+    header {
+		/*
+        height: 300px;
+		*/
+    }
+    header > div:first-child {
+        display: flex;
+        flex-direction: row;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        justify-content: right;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    header nav ul li {
+        padding: 0.4em 1em;
+    }
+    /* ABOUT */
+    #about > div {
+        display: flex;
+        flex-direction: row;
+    }
+    #about > div > div {
+        width: 50%;
+    }
+    #about > div > div > img {
+        width: 100%;
+    }
+
+    /* CONTACT */
+    #contact > div {
+        display: flex;
+        flex-direction: row;
+    }
+    #contact > div > div:first-child {
+        width: 60%;
+    }
+    #contact > div > div:last-child {
+        width: 40%;
+    }
+
+    /* FOOTER */
+    #footer {
+        display: flex;
+        flex-direction: row;
+    }
+    #footer > div {
+        width: 33%;
+        padding-left: 2em;
+    }
+    #footer > div:nth-child(2),  #footer > div:nth-child(3) {
+        border-left: 1px dotted #e65100;
+    }
+}
+
+@media only screen and (min-width: 962px) {
+    /* HEADER */
+    header {
+		/*
+        height: 400px;
+        max-height: 400px;
+		*/
+    }
+    header > div > h2 {
+        top: 160px;
+        font-size: 2em;
+    }
+    header div img {
+        width: 100%;
+        height: auto;
+    }
+    main {
+        margin: 1em /*400px*/ 10% 0 10%;
+    }
+
+    /* TEAM */
+    section#team > div div {
+        width: 25%;
+        flex-wrap: wrap;
+    }
+
+    /* CONTACT */
+    #contact > div > div:first-child {
+        width: 70%;
+    }
+    #contact > div > div:last-child {
+        width: 30%;
+    }
+}
